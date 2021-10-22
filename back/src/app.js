@@ -3,6 +3,7 @@ const db = require("./db");
 
 const app = express();
 
+// db connecting test
 const test = async () => {
   db.connect();
 

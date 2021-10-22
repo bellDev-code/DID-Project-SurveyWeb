@@ -1,5 +1,6 @@
 import { createApp } from "vue";
 import { createWebHistory, createRouter } from "vue-router";
+import api from "./api";
 
 // styles
 
@@ -94,4 +95,7 @@ const router = createRouter({
   routes,
 });
 
-createApp(App).use(router).mount("#app");
+createApp(App)
+  .use(router)
+  .mixin(api)
+  .mount("#app");

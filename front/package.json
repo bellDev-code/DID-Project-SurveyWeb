@@ -43,12 +43,15 @@
       "node": true
     },
     "extends": [
-      "plugin:vue/essential",
-      "eslint:recommended"
+      "plugin:vue/vue3-essential",
+      "eslint:recommended",
+      "@vue/prettier"
     ],
-    "rules": {},
     "parserOptions": {
-      "parser": "@babel/eslint-parser"
+      "parser": "babel-eslint"
+    },
+    "rules": {
+      "space-before-function-paren": "off"
     }
   },
   "postcss": {

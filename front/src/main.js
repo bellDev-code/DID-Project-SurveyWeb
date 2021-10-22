@@ -5,6 +5,7 @@ import { createWebHistory, createRouter } from 'vue-router';
 
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import '@/assets/styles/tailwind.css';
+// import 'bootstrap/dist/css/bootstrap.css';
 
 // mouting point for the whole app
 
@@ -26,12 +27,20 @@ import Maps from '@/views/admin/Maps.vue';
 
 import Login from '@/views/auth/Login.vue';
 import Register from '@/views/auth/Register.vue';
+import MyPage from '@/views/auth/MyPage.vue';
 
 // views without layouts
 
 import Landing from '@/views/Landing.vue';
 import Profile from '@/views/Profile.vue';
 import Index from '@/views/Index.vue';
+
+// 기업용
+
+// 공통사용
+
+import Event from '@/views/total/Event.vue';
+import Introduce from '@/views/total/Introduce.vue';
 
 // routes
 
@@ -56,6 +65,14 @@ const routes = [
       {
         path: '/admin/maps',
         component: Maps
+      },
+      {
+        path: '/admin/event',
+        component: Event
+      },
+      {
+        path: '/admin/introduce',
+        component: Introduce
       }
     ]
   },
@@ -71,6 +88,18 @@ const routes = [
       {
         path: '/auth/register',
         component: Register
+      },
+      {
+        path: '/auth/myPage',
+        component: MyPage
+      },
+      {
+        path: '/auth/event',
+        component: Event
+      },
+      {
+        path: '/auth/introduce',
+        component: Introduce
       }
     ]
   },

@@ -15,6 +15,7 @@ import App from "@/App.vue";
 
 import Admin from "@/layouts/Admin.vue";
 import Auth from "@/layouts/Auth.vue";
+import Auth1 from "@/layouts/Auth1.vue";
 
 // views for Admin layout
 
@@ -27,6 +28,7 @@ import Maps from "@/views/admin/Maps.vue";
 
 import Login from "@/views/auth/Login.vue";
 import Register from "@/views/auth/Register.vue";
+import MyPage from "@/views/auth/MyPage.vue";
 
 // views without layouts
 
@@ -72,6 +74,25 @@ const routes = [
       {
         path: "/auth/register",
         component: Register,
+      },
+    ],
+  },
+  {
+    path: "/auth1",
+    redirect: "/auth1/login",
+    component: Auth1,
+    children: [
+      {
+        path: "/auth1/login",
+        component: Login,
+      },
+      {
+        path: "/auth1/register",
+        component: Register,
+      },
+      {
+        path: "/auth1/myPage",
+        component: MyPage,
       },
     ],
   },

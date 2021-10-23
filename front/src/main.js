@@ -36,6 +36,12 @@ import Landing from "@/views/Landing.vue";
 import Profile from "@/views/Profile.vue";
 import Index from "@/views/Index.vue";
 
+// views for day layout
+
+import Main from "@/views/Main.vue";
+import Survey from "@/views/Survey.vue";
+import Token from "@/views/Token.vue";
+
 // routes
 
 const routes = [
@@ -103,6 +109,18 @@ const routes = [
   {
     path: "/profile",
     component: Profile,
+  },
+  {
+    path: "/main",
+    component: Main,
+  },
+  {
+    path: "/survey",
+    component: Survey,
+  },
+  {
+    path: "/token",
+    component: Token,
   },
   {
     path: "/",

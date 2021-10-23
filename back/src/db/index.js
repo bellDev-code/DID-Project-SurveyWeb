@@ -27,8 +27,7 @@ const initialize = async () => {
       password    TEXT        NOT NULL,
       name        TEXT        NOT NULL,
       email       TEXT        NOT NULL     UNIQUE,
-      "createdAt" TIMESTAMP   NOT NULL,
-      "updatedAt" TIMESTAMP   NOT NULL
+      "createdAt" TIMESTAMP   NOT NULL
     )
     `
   );

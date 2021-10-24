@@ -82,7 +82,8 @@
                   block: openTab === 3,
                 }"
               >
-                <MyPageInfo />
+                <HeaderStats />
+
                 <CardTable /><!-- color="dark" -->
                 <CardTable color="dark" /><!-- color="dark" -->
               </div>
@@ -100,6 +101,8 @@
 import team2 from "@/assets/img/PngItem_1378758.png";
 import MyPageInfo from "./MyPageInfo.vue";
 import CardTable from "../components/Cards/CardTable.vue";
+import HeaderStats from "@/components/Headers/HeaderStats.vue";
+
 export default {
   name: "blueGray-tabs",
   data() {
@@ -108,7 +111,7 @@ export default {
       openTab: 1,
     };
   },
-  components: { MyPageInfo, CardTable },
+  components: { MyPageInfo, CardTable, HeaderStats },
   methods: {
     toggleTabs: function(tabNumber) {
       this.openTab = tabNumber;

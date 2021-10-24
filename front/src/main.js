@@ -15,7 +15,6 @@ import App from "@/App.vue";
 
 import Admin from "@/layouts/Admin.vue";
 import Auth from "@/layouts/Auth.vue";
-import Auth1 from "@/layouts/Auth1.vue";
 
 // views for Admin layout
 
@@ -28,13 +27,18 @@ import Maps from "@/views/admin/Maps.vue";
 
 import Login from "@/views/auth/Login.vue";
 import Register from "@/views/auth/Register.vue";
-import MyPage from "@/views/auth/MyPage.vue";
 
 // views without layouts
 
 import Landing from "@/views/Landing.vue";
 import Profile from "@/views/Profile.vue";
 import Index from "@/views/Index.vue";
+
+// tejin3
+import Auth1 from "@/layouts/Auth1.vue";
+import MyPage from "@/views/auth/MyPage.vue";
+import EventVC from "@/views/EventVC.vue";
+import Welcome from "@/views/Welcome.vue";
 
 // views for day layout
 
@@ -97,7 +101,7 @@ const routes = [
         component: Register,
       },
       {
-        path: "/auth1/myPage",
+        path: "/auth1/mypage",
         component: MyPage,
       },
     ],
@@ -121,6 +125,14 @@ const routes = [
   {
     path: "/token",
     component: Token,
+  },
+  {
+    path: "/eventvc",
+    component: EventVC,
+  },
+  {
+    path: "/welcome",
+    component: Welcome,
   },
   {
     path: "/",

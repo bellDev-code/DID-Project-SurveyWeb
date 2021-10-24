@@ -9,7 +9,7 @@
           <div class="px-6">
             <MyPageBasic1 />
             <!-- 내용 시작 -->
-            <MyPageInfo />
+            <!-- <MyPageInfo /> -->
 
             <!-- 내용 끝 -->
           </div>
@@ -22,7 +22,7 @@
 // import team2 from "@/assets/img/PngItem_1378758.png";
 import MyPageBasic from "../../tejin/MyPageBasic.vue";
 import MyPageBasic1 from "../../tejin/MyPageBasic1.vue";
-import MyPageInfo from "../../tejin/MyPageInfo.vue";
+// import MyPageInfo from "../../tejin/MyPageInfo.vue";
 
 export default {
   data() {
@@ -30,6 +30,6 @@ export default {
       hello: null,
     };
   },
-  components: { MyPageBasic, MyPageBasic1, MyPageInfo },
+  components: { MyPageBasic, MyPageBasic1 },
 };
 </script>

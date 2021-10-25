@@ -1,11 +1,12 @@
-import Vue from "vue";
-import VueRouter from "vue-router";
-import Home from "../views/Home.vue";
-import Main from "../views/Main.vue";
-import Survey from "../views/Survey.vue";
-import Token from "../views/Token.vue";
+import Vue from "vue"
+import VueRouter from "vue-router"
+import Home from "../views/Home.vue"
+import Main from "../views/Main.vue"
+import Survey from "../views/Survey.vue"
+import Token from "../views/Token.vue"
+import Welcome from "../views/Welcome.vue"
 
-Vue.use(VueRouter);
+Vue.use(VueRouter)
 
 const routes = [
   {
@@ -33,13 +34,17 @@ const routes = [
   {
     path: "/token",
     component: Token
+  },
+  {
+    path: "/welcome",
+    component: Welcome
   }
-];
+]
 
 const router = new VueRouter({
   mode: "history",
   base: process.env.BASE_URL,
   routes
-});
+})
 
-export default router;
+export default router

@@ -2,6 +2,8 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
+
+// server
 import api from './api'
 
 // bootstrap
@@ -10,8 +12,10 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 
 Vue.use(BootstrapVue)
-  .use(IconsPlugin)
-  .mixin(api)
+
+Vue.use(IconsPlugin)
+
+Vue.mixin(api)
 
 Vue.config.productionTip = false
 

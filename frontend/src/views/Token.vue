@@ -370,4 +370,5 @@ export default {
 </script>
 <style lang="css">
 @import "../assets/css/token.css";
+@import "../assets/css/nicepage.css";
 </style>

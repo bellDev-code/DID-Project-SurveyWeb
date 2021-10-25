@@ -27,4 +27,31 @@ router.post("/", async (req, res, next) => {
   }
 });
 
+// GET USER
+router.get("/:id", async (req, res, next) => {
+  try {
+    const client = await db.connect();
+    console.log(req.params);
+
+    const { id } = req.params;
+
+    const result = await client.query(
+      `
+        SELECT id, name, email, "createdAt" FROM public."User" WHERE id = $1
+      `,
+      [parseInt(id)]
+    );
+
+    client.release();
+
+    if (result.rows.length < 1) {
+      return res.status(404).send("존재하지 않는 유저입니다.");
+    }
+    return res.json(result.rows[0]);
+  } catch (error) {
+    console.error(error);
+    return res.status(403).send(error.message);
+  }
+});
+
 module.exports = router;

@@ -9,3 +9,7 @@ Content-Type: application/json
   "email":"Ethereum@upbitsibal.com",
   "name": "종호"
 }
+
+###
+
+http://localhost:4190/api/users/1

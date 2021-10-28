@@ -2,20 +2,25 @@ const router = require("express").Router();
 const dayjs = require("dayjs");
 const db = require("../db");
 const { emailRegex } = "../utils/regex.js";
+const bcrypt = require("bcrypt");
 
 // Join User
 router.post("/", async (req, res, next) => {
   console.log(req);
-  const client = await db.connect();
 
   const now = dayjs().format();
+  const salt = await bcrypt.genSalt(+process.env.PASSWORD_ROUND_LENGTH);
+  const hashed = await bcrypt.hash(req.body.password, salt);
+
+  const client = await db.connect();
+
   try {
     await client.query(
       `
         INSERT INTO public."User" (username, password, name, email, "createdAt")
         VALUES ($1, $2, $3, $4, $5)
       `,
-      [req.body.username, req.body.password, req.body.name, req.body.email, now]
+      [req.body.username, hashed, req.body.name, req.body.email, now]
     );
 
     client.release();
